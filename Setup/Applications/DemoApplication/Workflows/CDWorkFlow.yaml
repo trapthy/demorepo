@@ -44,6 +44,15 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
+    steps:
+    - type: EMAIL
+      name: Email
+      properties:
+        body: CD Workflow completed
+        ccAddress: ''
+        ignoreDeliveryFailure: false
+        subject: CD Workflow completed
+        toAddress: trapthy.shetty@infosys.com
     stepsInParallel: false
   provisionNodes: false
   serviceName: DemoService
