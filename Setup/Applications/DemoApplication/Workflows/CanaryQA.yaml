@@ -86,6 +86,34 @@ preDeploymentSteps:
     timeoutMillis: 300000
     variables: null
     workspace: ''
+- type: TERRAFORM_PROVISION
+  name: Terraform Provision
+  properties:
+    backendConfigs:
+    - name: key
+      value: terraform.tfstate
+      valueType: TEXT
+    - name: container_name
+      value: demo-container
+      valueType: TEXT
+    - name: resource_group_name
+      value: demo-rg
+      valueType: TEXT
+    - name: storage_account_name
+      value: demostoreaccount3
+      valueType: TEXT
+    delegateTag: gcp
+    exportPlanToApplyStep: false
+    inheritApprovedPlan: false
+    name: Terraform Provision
+    provisionerName: EnvProvisioner
+    runPlanOnly: false
+    targets:
+    - kubernetes_namespace.example
+    tfVarFiles: null
+    timeoutMillis: 300000
+    variables: null
+    workspace: ''
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: KubernetesClusterDemo
