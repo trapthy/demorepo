@@ -1,3 +1,11 @@
 harnessApiVersion: '1.0'
 type: PIPELINE
 description: CI Build
+pipelineStages:
+- type: ENV_STATE
+  name: CIWorkFlow
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 1
+  workflowName: CIWorkFlow
