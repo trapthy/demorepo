@@ -3,7 +3,7 @@ type: PIPELINE
 description: DeploymentPipeline
 pipelineStages:
 - type: ENV_STATE
-  name: CIWorkFlow
+  name: CI Build Artifact
   parallel: false
   skipCondition:
     type: DO_NOT_SKIP
