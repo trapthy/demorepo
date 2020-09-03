@@ -34,6 +34,33 @@ phases:
     steps:
     - type: K8S_DEPLOYMENT_ROLLING
       name: Rollout Deployment
+    - type: TERRAFORM_APPLY
+      name: Terraform Apply
+      properties:
+        backendConfigs:
+        - name: key
+          value: terraform.tfstate
+          valueType: TEXT
+        - name: container_name
+          value: demo-container
+          valueType: TEXT
+        - name: resource_group_name
+          value: demo-rg
+          valueType: TEXT
+        - name: storage_account_name
+          value: demostoreaccount3
+          valueType: TEXT
+        delegateTag: ''
+        exportPlanToApplyStep: false
+        inheritApprovedPlan: false
+        name: Terraform Apply
+        provisionerName: EnvProvisioner
+        runPlanOnly: false
+        targets: null
+        tfVarFiles: null
+        timeoutMillis: 300000
+        variables: null
+        workspace: ''
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
