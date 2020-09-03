@@ -24,7 +24,7 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: STAGE 2
 - type: ENV_STATE
-  name: CDWorkFlow
+  name: QA Deployment
   parallel: false
   skipCondition:
     type: DO_NOT_SKIP
