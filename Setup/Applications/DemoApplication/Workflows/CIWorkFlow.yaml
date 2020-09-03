@@ -45,6 +45,21 @@ phases:
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
+    steps:
+    - type: EMAIL
+      name: Email
+      properties:
+        body: |-
+          HI,
+
+          CI workflow execution completed Successfully.
+
+          Thanks
+          Harness
+        ccAddress: kiran16@infosys.com
+        ignoreDeliveryFailure: false
+        subject: CI Workflow Completed
+        toAddress: trapthy.shetty@infosys.com
     stepsInParallel: false
   provisionNodes: false
   statefulSet: false
