@@ -5,5 +5,8 @@ deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: KubernetesClusterDemo
-  namespace: demons
-  releaseName: release-${infra.kubernetes.infraId}
+  expressions:
+    namespace: demons
+    releaseName: release-${infra.kubernetes.infraId}
+  namespace: default
+provisioner: EnvProvisioner
