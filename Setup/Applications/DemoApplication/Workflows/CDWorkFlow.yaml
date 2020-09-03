@@ -9,6 +9,11 @@ failureStrategies:
   - APPLICATION_ERROR
   repairActionCode: ROLLBACK_WORKFLOW
   retryCount: 0
+- executionScope: WORKFLOW
+  failureTypes:
+  - VERIFICATION_FAILURE
+  repairActionCode: ROLLBACK_WORKFLOW
+  retryCount: 0
 notificationRules:
 - conditions:
   - FAILED
