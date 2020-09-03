@@ -32,6 +32,16 @@ phases:
     steps:
     - type: ARTIFACT_COLLECTION
       name: Artifact Collection
+      properties:
+        artifactStreamName: DockerHub_DemoRepo
+        buildNo: ${context.JenkinsOutput.buildNumber}
+        entityType: SERVICE
+        regex: false
+        serviceName: DemoService
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
+        timeoutMillis: 300000
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
