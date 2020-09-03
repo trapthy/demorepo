@@ -31,6 +31,15 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
+    steps:
+    - type: DYNA_TRACE
+      name: Dynatrace
+      properties:
+        analysisServerConfigId: l0T40hyyQzehCSGVr6RaEQ
+        analysisTolerance: HIGH
+        comparisonStrategy: COMPARE_WITH_CURRENT
+        serviceEntityId: SERVICE-31FD697AD7A397F9
+        timeDuration: '5'
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
