@@ -43,6 +43,15 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
+    steps:
+    - type: EMAIL
+      name: Email
+      properties:
+        body: Pre-Prod Deploy Completed
+        ccAddress: ''
+        ignoreDeliveryFailure: false
+        subject: Pre-Prod Deploy Completed
+        toAddress: trapthy.shetty@infosys.com
     stepsInParallel: false
   provisionNodes: false
   serviceName: DemoService
