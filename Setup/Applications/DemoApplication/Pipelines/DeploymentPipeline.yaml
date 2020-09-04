@@ -9,8 +9,15 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: STAGE 1
   workflowName: CIWorkFlow
+- type: ENV_STATE
+  name: CIWorkFlow
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 2
+  workflowName: CIWorkFlow
 - type: APPROVAL
-  name: Approval 1
+  name: Approval 2
   parallel: false
   properties:
     userGroups:
@@ -31,9 +38,10 @@ pipelineStages:
   stageName: STAGE 3
   workflowName: CDWorkFlow
 - type: APPROVAL
-  name: Approval 3
+  name: Approval 4
   parallel: false
   properties:
+    workflowVariables: null
     approvalStateParams:
       serviceNowApprovalParams:
         approval:
