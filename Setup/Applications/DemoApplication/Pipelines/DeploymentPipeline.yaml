@@ -23,15 +23,8 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 2
-- type: ENV_STATE
-  name: CanaryQA
-  parallel: false
-  skipCondition:
-    type: DO_NOT_SKIP
-  stageName: STAGE 3
-  workflowName: CanaryQA
 - type: APPROVAL
-  name: Approval 3
+  name: Approval 2
   parallel: false
   properties:
     workflowVariables: null
