@@ -10,6 +10,6 @@ backendConfigs:
 - name: storage_account_name
   valueType: TEXT
 description: EnvProvisioner
-path: .
+path: /
 sourceRepoBranch: master
-sourceRepoSettingName: Github_Terraform
+sourceRepoSettingName: Azure Repo
