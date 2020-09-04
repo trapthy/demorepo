@@ -187,7 +187,7 @@ Supports
 ```
 <!-- To build the image - "mvn clean package" -->
 <!-- TAG - 01-hello-world-rest-api:latest -->
-<!-- docker run -p 8080:8080 01-hello-world-rest-api:latest -->
+<!-- docker run -p 8080:8080 01-hello-world-rest-api:latest --->
 <plugin>
    <groupId>io.fabric8</groupId>
    <artifactId>docker-maven-plugin</artifactId>
