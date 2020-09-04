@@ -1,9 +1,0 @@
-harnessApiVersion: '1.0'
-type: TERRAFORM
-backendConfigs:
-- name: key
-  valueType: TEXT
-description: EnvProvisioner
-path: .
-sourceRepoBranch: master
-sourceRepoSettingName: Github_terraform
