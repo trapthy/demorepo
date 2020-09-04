@@ -8,6 +8,7 @@ pipelineStages:
   properties:
     userGroups:
     - Account Administrator
+    workflowVariables: null
     stageName: STAGE 1
     timeoutMillis: 86400000
     approvalStateType: USER_GROUP
@@ -28,14 +29,14 @@ pipelineStages:
   properties:
     userGroups:
     - Account Administrator
-    workflowVariables: null
-    stageName: STAGE 2
+    variables: null
+    stageName: STAGE 3
     timeoutMillis: 86400000
     approvalStateType: USER_GROUP
     sweepingOutputName: ''
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: STAGE 2
+  stageName: STAGE 3
 - type: ENV_STATE
   name: CDWorkFlow
   parallel: false
