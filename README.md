@@ -1,4 +1,4 @@
-#### Hello World Rest API####
+#### Hello
 
 #### Building an Image
 
