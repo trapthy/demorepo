@@ -1,7 +1,0 @@
-harnessApiVersion: '1.0'
-type: SHELL_SCRIPT
-description: NSProvisioner
-scriptBody: |-
-  curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-  az --version
-  az account show
