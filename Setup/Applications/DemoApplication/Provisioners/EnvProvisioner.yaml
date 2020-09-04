@@ -12,4 +12,4 @@ backendConfigs:
 description: EnvProvisioner
 path: /
 sourceRepoBranch: master
-sourceRepoSettingName: Azure Repo
+sourceRepoSettingName: Azure_Teraform_Repo
