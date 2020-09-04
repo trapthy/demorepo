@@ -34,15 +34,6 @@ phases:
     steps:
     - type: K8S_DEPLOYMENT_ROLLING
       name: Rollout Deployment
-    - type: TERRAFORM_DESTROY
-      name: Terraform Destroy
-      properties:
-        delegateTag: harness-delegate-kubernates-mhojwn-0
-        inheritApprovedPlan: false
-        provisionerName: EnvProvisioner
-        runPlanOnly: false
-        timeoutMillis: 300000
-        workspace: ''
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
