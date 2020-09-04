@@ -48,6 +48,7 @@ pipelineStages:
   name: Approval 4
   parallel: false
   properties:
+    workflowVariables: null
     approvalStateParams:
       serviceNowApprovalParams:
         approval:
@@ -73,9 +74,9 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: STAGE 5
 - type: ENV_STATE
-  name: PreProd Deployment
+  name: Prod Deployment
   parallel: false
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: STAGE 5
+  stageName: STAGE 6
   workflowName: CDPreProdWorkflow
