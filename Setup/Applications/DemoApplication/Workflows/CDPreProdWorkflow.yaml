@@ -39,6 +39,9 @@ phases:
         analysisTolerance: HIGH
         comparisonStrategy: COMPARE_WITH_CURRENT
         serviceEntityId: SERVICE-31FD697AD7A397F9
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeDuration: '5'
     stepsInParallel: false
   - type: K8S_PHASE_STEP
