@@ -2,20 +2,13 @@ harnessApiVersion: '1.0'
 type: PIPELINE
 description: DeploymentPipeline
 pipelineStages:
-- type: ENV_STATE
-  name: CIWorkFlow
-  parallel: false
-  skipCondition:
-    type: DO_NOT_SKIP
-  stageName: STAGE 2
-  workflowName: CIWorkFlow
 - type: APPROVAL
-  name: Approval 1
+  name: Approval 0
   parallel: false
   properties:
     userGroups:
     - Account Administrator
-    variables: null
+    workflowVariables: null
     stageName: STAGE 2
     timeoutMillis: 86400000
     approvalStateType: USER_GROUP
@@ -23,6 +16,13 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 2
+- type: ENV_STATE
+  name: CIWorkFlow
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 2
+  workflowName: CIWorkFlow
 - type: APPROVAL
   name: Approval 2
   parallel: false
