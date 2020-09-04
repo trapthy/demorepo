@@ -23,8 +23,15 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 2
+- type: ENV_STATE
+  name: CDWorkFlow
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 3
+  workflowName: CDWorkFlow
 - type: APPROVAL
-  name: Approval 2
+  name: Approval 3
   parallel: false
   properties:
     workflowVariables: null
