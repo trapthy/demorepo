@@ -34,7 +34,6 @@ pipelineStages:
   name: Approval 3
   parallel: false
   properties:
-    workflowVariables: null
     approvalStateParams:
       serviceNowApprovalParams:
         approval:
@@ -52,7 +51,7 @@ pipelineStages:
         changeWindowPresent: false
         changeWindowStartField: ''
         changeWindowEndField: ''
-        issueNumber: CHG0030016
+        issueNumber: CHG0030017
     stageName: STAGE 4
     timeoutMillis: 86400000
     approvalStateType: SERVICENOW
