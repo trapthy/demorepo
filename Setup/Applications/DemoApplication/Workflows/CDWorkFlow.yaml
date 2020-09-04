@@ -26,7 +26,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: KubernetesClusterDemo
   daemonSet: false
-  infraDefinitionName: DemoQAInfra
+  infraDefinitionName: QA
   name: Rolling
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -57,7 +57,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: KubernetesClusterDemo
   daemonSet: false
-  infraDefinitionName: DemoQAInfra
+  infraDefinitionName: QA
   name: Rollback Rolling
   phaseNameForRollback: Rolling
   phaseSteps:
