@@ -6,7 +6,7 @@ infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: KubernetesClusterDemo
   expressions:
-    namespace: demons
     releaseName: release-${infra.kubernetes.infraId}
+    namespace: demons
   namespace: default
 provisioner: EnvProvisioner
