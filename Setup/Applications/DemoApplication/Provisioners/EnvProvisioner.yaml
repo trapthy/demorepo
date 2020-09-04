@@ -1,14 +1,9 @@
 harnessApiVersion: '1.0'
 type: TERRAFORM
 backendConfigs:
-- name: container_name
-  valueType: TEXT
 - name: key
   valueType: TEXT
-- name: resource_group_name
-  valueType: TEXT
-- name: storage_account_name
-  valueType: TEXT
 description: EnvProvisioner
+path: .
 sourceRepoBranch: master
-sourceRepoSettingName: Azure_Teraform_Repo
+sourceRepoSettingName: Github_terraform
