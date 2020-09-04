@@ -10,6 +10,5 @@ backendConfigs:
 - name: storage_account_name
   valueType: TEXT
 description: EnvProvisioner
-path: /
 sourceRepoBranch: master
 sourceRepoSettingName: Azure_Teraform_Repo
