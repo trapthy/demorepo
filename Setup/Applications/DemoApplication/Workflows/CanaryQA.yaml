@@ -48,16 +48,6 @@ phases:
   provisionNodes: false
   serviceName: DemoService
   statefulSet: false
-postDeploymentSteps:
-- type: TERRAFORM_DESTROY
-  name: Terraform Destroy
-  properties:
-    delegateTag: harness-delegate-kubernates
-    inheritApprovedPlan: false
-    provisionerName: EnvProvisioner
-    runPlanOnly: false
-    timeoutMillis: 300000
-    workspace: ''
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: KubernetesClusterDemo
