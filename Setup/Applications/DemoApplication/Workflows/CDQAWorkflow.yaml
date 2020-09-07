@@ -100,6 +100,16 @@ phases:
   provisionNodes: false
   serviceName: DemoService
   statefulSet: false
+postDeploymentSteps:
+- type: TERRAFORM_DESTROY
+  name: Terraform Destroy
+  properties:
+    delegateTag: harness-delegate-kubernates-mhojwn-0
+    inheritApprovedPlan: false
+    provisionerName: TFProvisioner
+    runPlanOnly: false
+    timeoutMillis: 300000
+    workspace: QA
 preDeploymentSteps:
 - type: TERRAFORM_PROVISION
   name: Terraform Provision
