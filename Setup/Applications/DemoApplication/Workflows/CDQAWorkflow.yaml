@@ -134,6 +134,9 @@ preDeploymentSteps:
     provisionerName: TFProvisioner
     runPlanOnly: false
     targets: null
+    templateUuid: null
+    templateVariables: null
+    templateVersion: null
     tfVarFiles: null
     timeoutMillis: 300000
     variables: null
