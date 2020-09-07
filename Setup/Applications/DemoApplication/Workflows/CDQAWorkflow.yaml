@@ -17,4 +17,32 @@ notificationRules:
   userGroupAsExpression: false
   userGroupIds:
   - Vi2TVf7yTmidmAQSdAWxPw
+preDeploymentSteps:
+- type: TERRAFORM_PROVISION
+  name: Terraform Provision
+  properties:
+    backendConfigs:
+    - name: resource_group_name
+      value: demo-rg
+      valueType: TEXT
+    - name: storage_account_name
+      value: demostoreaccount3
+      valueType: TEXT
+    - name: container_name
+      value: demo-container
+      valueType: TEXT
+    - name: key
+      value: terraform.tfstate
+      valueType: TEXT
+    delegateTag: harness-delegate-kubernates-mhojwn-0
+    exportPlanToApplyStep: false
+    inheritApprovedPlan: false
+    name: Terraform Provision
+    provisionerName: TFProvisioner
+    runPlanOnly: false
+    targets: null
+    tfVarFiles: null
+    timeoutMillis: 300000
+    variables: null
+    workspace: QA
 templatized: false
