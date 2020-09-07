@@ -5,5 +5,8 @@ deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: KubernetesClusterDemo
+  expressions:
+    namespace: testone
+    releaseName: release-${infra.kubernetes.infraId}
   namespace: default
-  releaseName: release-${infra.kubernetes.infraId}
+provisioner: TFProvisioner
