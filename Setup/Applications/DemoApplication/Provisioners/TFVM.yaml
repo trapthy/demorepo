@@ -1,0 +1,15 @@
+harnessApiVersion: '1.0'
+type: TERRAFORM
+backendConfigs:
+- name: container_name
+  valueType: TEXT
+- name: key
+  valueType: TEXT
+- name: resource_group_name
+  valueType: TEXT
+- name: storage_account_name
+  valueType: TEXT
+description: TFVM
+path: .
+sourceRepoBranch: master
+sourceRepoSettingName: TFVM
