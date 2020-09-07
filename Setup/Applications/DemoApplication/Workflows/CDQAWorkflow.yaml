@@ -131,7 +131,7 @@ preDeploymentSteps:
     exportPlanToApplyStep: false
     inheritApprovedPlan: false
     name: Terraform Provision
-    provisionerName: TFProvisioner
+    provisionerName: TFVM
     runPlanOnly: false
     targets: null
     templateUuid: null
