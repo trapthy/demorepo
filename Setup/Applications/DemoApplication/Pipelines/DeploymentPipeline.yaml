@@ -38,6 +38,13 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: STAGE 3
 - type: ENV_STATE
+  name: QADeploy
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 4
+  workflowName: CDQAWorkflow
+- type: ENV_STATE
   name: CDWorkFlow
   parallel: false
   skipCondition:
@@ -45,7 +52,7 @@ pipelineStages:
   stageName: STAGE 4
   workflowName: CDWorkFlow
 - type: APPROVAL
-  name: Approval 4
+  name: Approval 5
   parallel: false
   properties:
     workflowVariables: null
