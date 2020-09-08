@@ -57,14 +57,6 @@ phases:
         timeoutMillis: 10000
         url: ${deploymentUrl}
         useProxy: false
-    - type: DYNA_TRACE
-      name: Dynatrace
-      properties:
-        analysisServerConfigId: l0T40hyyQzehCSGVr6RaEQ
-        analysisTolerance: HIGH
-        comparisonStrategy: COMPARE_WITH_CURRENT
-        serviceEntityId: SERVICE-6D86C15AFBB05AF7
-        timeDuration: '5'
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
