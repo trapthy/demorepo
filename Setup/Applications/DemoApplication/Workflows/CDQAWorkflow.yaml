@@ -127,37 +127,6 @@ postDeploymentSteps:
     runPlanOnly: false
     timeoutMillis: 300000
     workspace: QA
-preDeploymentSteps:
-- type: TERRAFORM_PROVISION
-  name: Terraform Provision
-  properties:
-    backendConfigs:
-    - name: resource_group_name
-      value: demo-rg
-      valueType: TEXT
-    - name: storage_account_name
-      value: demostoreaccount3
-      valueType: TEXT
-    - name: container_name
-      value: demo-container
-      valueType: TEXT
-    - name: key
-      value: terraform.tfstate
-      valueType: TEXT
-    delegateTag: harness-delegate-kubernates-mhojwn-0
-    exportPlanToApplyStep: false
-    inheritApprovedPlan: false
-    name: Terraform Provision
-    provisionerName: TFVM
-    runPlanOnly: false
-    targets: null
-    templateUuid: null
-    templateVariables: null
-    templateVersion: null
-    tfVarFiles: null
-    timeoutMillis: 300000
-    variables: null
-    workspace: QA
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: KubernetesClusterDemo
