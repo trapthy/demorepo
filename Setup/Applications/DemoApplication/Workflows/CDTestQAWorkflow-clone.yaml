@@ -2,7 +2,7 @@ harnessApiVersion: '1.0'
 type: CANARY
 concurrencyStrategy: INFRA
 description: CDQAWorkflow
-envName: PreProd
+envName: QA
 failureStrategies:
 - executionScope: WORKFLOW
   failureTypes:
@@ -77,7 +77,6 @@ phases:
   statefulSet: false
 rollbackPhases:
 - type: KUBERNETES
-  computeProviderName: KubernetesClusterDemo
   daemonSet: false
   infraDefinitionName: DemoPreProdInfra
   name: Rollback Canary
