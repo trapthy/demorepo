@@ -1,5 +1,5 @@
-name: harness-example
-replicas: 1
+name: harness-demo
+replicas: 2
 
 image: ${artifact.metadata.image}
 dockercfg: ${artifact.source.dockerconfig}
