@@ -5,5 +5,5 @@ deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: KubernetesClusterDemo
-  namespace: appns
+  namespace: testns
   releaseName: release-${infra.kubernetes.infraId}
