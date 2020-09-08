@@ -29,6 +29,11 @@ phases:
     steps:
     - type: K8S_BLUE_GREEN_DEPLOY
       name: Stage Deployment
+      properties:
+        stateTimeoutInMinutes: 10
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
