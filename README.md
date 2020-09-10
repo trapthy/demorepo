@@ -1,5 +1,4 @@
-#### Hello123456789
-###1
+#### Hello
 #### Building an Image
 
 1. Build a Jar - /target/hello-world-rest-api.jar
